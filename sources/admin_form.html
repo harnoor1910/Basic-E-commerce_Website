@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: palevioletred;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .form {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: #ffffff;
+            width: 30vw;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input[type="text"], 
+        select, 
+        input[type="file"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            background-color: palevioletred;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #d35b82;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>ADMIN PANEL</h1>
+        <form class="form">
+            <label for="Cname">Category:</label>
+            <select id="Cname" name="Cname" placeholder="enter category">
+                <option value="All">All</option>
+                <option value="Cakes">Cakes</option>
+                <option value="Cupcakes">Cupcakes</option>
+                <option value="Sweet">Sweet</option>
+                <option value="Doughnuts">Doughnuts</option>
+            </select>
+
+            <label for="ItemName">Item name:</label>
+            <input type="text" id="ItemName" name="ItemName" placeholder="Enter item name..">
+
+            <label for="Price">Price:</label>
+            <input type="text" id="Price" name="Price" placeholder="Enter price..">
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image">
+
+            <input type="submit" value="Submit">
+            <!-- <button class="btn">Submit</button> -->
+        </form>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
